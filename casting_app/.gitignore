@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# 환경 변수 (중요!)
+.env
+*.env
+
+# 개인 데이터
+inspection_history.csv
+
+# 학습 데이터 (용량 큼)
+data/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 로그
+*.log

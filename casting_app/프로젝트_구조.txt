@@ -1,0 +1,50 @@
+casting_app/
+│
+├── app.py                          # Streamlit UI (메인 앱)
+├── config.py                       # 전역 설정
+├── .env                           # 환경 변수 (API 키)
+├── requirements.txt               # 패키지 의존성
+├── README.md                      # 프로젝트 문서
+├── inspection_history.csv         # 검사 이력
+│
+├── services/                      # 비즈니스 로직 (오케스트레이션)
+│   ├── inspection_orchestrator.py # 워크플로우 관리 (123줄)
+│   ├── analyzer.py                # 결함 분석 서비스
+│   ├── pdf_generator.py           # PDF 보고서 생성
+│   └── history.py                 # 검사 이력 관리
+│
+├── classifiers/                   # AI 모델 계층
+│   └── image_classifier.py        # EfficientNet-B0 분류기 (44줄)
+│
+├── explainers/                    # XAI (설명 가능한 AI)
+│   └── gradcam.py                 # Grad-CAM 히트맵 생성
+│
+├── llm/                           # LLM 통합 계층
+│   ├── analyzer.py                # Claude AI 분석기 (80줄)
+│   ├── client.py                  # Anthropic API 클라이언트
+│   └── prompt.py                  # 프롬프트 빌더
+│
+├── utils/                         # 유틸리티
+│   └── imaging.py                 # 이미지 전처리
+│
+├── models/                        # 학습된 모델
+│   └── efficientnet_b0_best.pth   # 모델 가중치 (99.86% 정확도)
+│
+├── notebooks/                     # Jupyter 노트북
+│   └── casting_model_comparison.ipynb  # 모델 학습 및 비교
+│
+├── assets/                        # 정적 리소스
+│   ├── accuracy_loss.png          # 학습 곡선
+│   ├── confusion_matrix.png       # 혼동 행렬
+│   └── sample_*.jpeg              # 샘플 이미지
+│
+├── Font/                          # 한글 폰트
+│   ├── malgun.ttf                 # 맑은 고딕
+│   └── malgunbd.ttf               # 맑은 고딕 Bold
+│
+└── data/                          # 학습 데이터셋 (7,348장)
+    ├── train/      (70%)          # 학습 데이터
+    │   ├── ok_front/              # 정상 제품
+    │   └── def_front/             # 불량 제품
+    ├── val/        (15%)          # 검증 데이터
+    └── test/       (15%)          # 테스트 데이터
