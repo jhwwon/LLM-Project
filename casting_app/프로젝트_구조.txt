@@ -1,7 +1,7 @@
 casting_app/
 │
-├── app.py                          # Streamlit UI (메인 앱)
-├── config.py                       # 전역 설정
+├── app.py                         # Streamlit UI (메인 앱)
+├── config.py                      # 전역 설정
 ├── .env                           # 환경 변수 (API 키)
 ├── requirements.txt               # 패키지 의존성
 ├── README.md                      # 프로젝트 문서
@@ -30,7 +30,7 @@ casting_app/
 ├── models/                        # 학습된 모델
 │   └── efficientnet_b0_best.pth   # 모델 가중치 (99.86% 정확도)
 │
-├── notebooks/                     # Jupyter 노트북
+├── notebooks/                          # Jupyter 노트북
 │   └── casting_model_comparison.ipynb  # 모델 학습 및 비교
 │
 ├── assets/                        # 정적 리소스
